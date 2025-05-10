@@ -6,7 +6,7 @@ import torchvision.transforms as transforms
 from torchvision.datasets import CIFAR10
 from torchvision.models import resnet18
 
-from hparams import config
+from hw3.hparams import config
 
 
 def main():

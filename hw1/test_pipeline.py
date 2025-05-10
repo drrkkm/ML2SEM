@@ -9,7 +9,7 @@ from torchvision.datasets import CIFAR10
 from prepare_data import prepare_data
 from train import main, compute_accuracy
 from compute_metrics import main as metrics_main
-from hparams import config
+from hw3.hparams import config
 
 
 @pytest.fixture
@@ -18,14 +18,12 @@ def train_dataset():
     prepare_data()
     assert CIFAR10(root='CIFAR10/train',
                             train=True,
-                            transform=transform,
-                            download=False,
+                            download=False
                             )
 
     assert CIFAR10(root='CIFAR10/test',
                            train=False,
-                           transform=transform,
-                           download=False,
+                           download=False
                            )
 
 
